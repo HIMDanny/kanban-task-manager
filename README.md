@@ -8,7 +8,8 @@ App for task management
 
 ### 💛 Frontend
 - [React](https://react.dev/) - The Frontend library based on Javascript
-- [Redux Toolkit Query](https://redux-toolkit.js.org/rtk-query/overview) - A state manager
+- [Redux Toolkit](https://redux-toolkit.js.org/) - A state manager
+- [Redux Toolkit Query](https://redux-toolkit.js.org/rtk-query/overview) - addon for Redux Toolkit for caching and fetching data
 
 ### 💙 Shared
 - [Zod](https://zod.dev/) - Typescript-oriented validation
