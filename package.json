@@ -2,7 +2,9 @@
 	"name": "kanban-task-manager",
 	"version": "1.0.0",
 	"description": "App for task management",
-	"scripts": {},
+	"scripts": {
+		"prepare": "husky install"
+	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/HIMDanny/kanban-task-manager.git"
@@ -17,5 +19,8 @@
 	"workspaces": [
 		"backend",
 		"client"
-	]
+	],
+	"devDependencies": {
+		"husky": "^8.0.0"
+	}
 }
