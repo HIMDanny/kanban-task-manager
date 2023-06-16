@@ -21,6 +21,7 @@
 		"client"
 	],
 	"devDependencies": {
+		"@commitlint/cli": "^17.6.5",
 		"husky": "^8.0.0"
 	}
 }
