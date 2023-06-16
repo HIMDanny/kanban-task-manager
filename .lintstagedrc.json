@@ -3,5 +3,7 @@
 		"eslint",
 		"prettier --list-different"
 	],
-	"*.md": "prettier --list-different"
+	"./client/**/*.{ts,tsx}": [
+		"stylelint"
+	],
 }
