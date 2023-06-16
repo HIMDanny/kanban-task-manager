@@ -1,5 +1,4 @@
 import type { UserConfig } from '@commitlint/types';
-import { RuleConfigSeverity } from '@commitlint/types';
 
 const COMMIT_MODIFIERS = ['+', '*', '-'];
 const COMMIT_MESSAGE_REGEXP = /^ktm-\d+: (\+|\*|\-) .*$/;
