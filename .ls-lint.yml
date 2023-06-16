@@ -1,0 +1,14 @@
+ls:
+  .ts: kebab-case | camelCase
+  .tsx: kebab-case | PascalCase
+  .d.ts: kebab-case
+
+  backend:
+    .ts: point.case | kebab-case
+
+ignore:
+  - .git
+  - node_modules
+  - commitlint.config.ts
+  - client/vite.config.ts
+  - backend/test
