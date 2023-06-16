@@ -1,9 +1,10 @@
 {
-	"*.(ts|tsx)": [
+	"*.{ts,tsx}": [
 		"eslint",
-		"prettier --list-different"
+		"prettier --write"
 	],
 	"./client/**/*.{ts,tsx}": [
 		"stylelint"
 	],
+	"*.md": "prettier --write"
 }
