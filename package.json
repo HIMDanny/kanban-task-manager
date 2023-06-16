@@ -2,9 +2,7 @@
 	"name": "kanban-task-manager",
 	"version": "1.0.0",
 	"description": "App for task management",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
+	"scripts": {},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/HIMDanny/kanban-task-manager.git"
