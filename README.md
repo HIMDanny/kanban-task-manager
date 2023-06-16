@@ -32,11 +32,10 @@ erDiagram
     dateTime created_at
     dateTime updated_at
     varchar name
-    json tasks "may be null if user doesn't provide tasks"
   }
 
- board ||--|{ tasks : board_id
-  tasks {
+ board ||--|{ task : board_id
+  task {
     int id PK
     dateTime created_at
     dateTime updated_at
@@ -44,10 +43,9 @@ erDiagram
     varchar title
     text description "may be null if user doesn't provide description"
     varchar status
-    json subtasks "may be null if user doesn't provide subtasks"
   }
-  tasks ||--|{ subtasks : task_id
-  subtasks {
+  task ||--|{ subtask : task_id
+  subtask {
     int id PK
     dateTime created_at
     dateTime updated_at
