@@ -22,6 +22,7 @@
 	],
 	"devDependencies": {
 		"@commitlint/cli": "^17.6.5",
+		"@ls-lint/ls-lint": "^2.0.0",
 		"husky": "^8.0.0",
 		"lint-staged": "^13.2.2",
 		"prettier": "^2.8.8"
