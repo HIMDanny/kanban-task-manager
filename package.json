@@ -5,6 +5,11 @@
 	"scripts": {
 		"prepare": "husky install"
 	},
+	"private": true,
+	"engines": {
+		"node": "18.x.x",
+		"npm": "9.x.x"
+	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/HIMDanny/kanban-task-manager.git"
