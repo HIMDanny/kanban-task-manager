@@ -1,0 +1,26 @@
+{
+	"name": "kanban-task-manager",
+	"version": "1.0.0",
+	"description": "App for task management",
+	"private": true,
+	"engines": {
+		"node": "18.x.x",
+		"npm": "9.x.x"
+	  },
+	"scripts": {},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/HIMDanny/kanban-task-manager.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/HIMDanny/kanban-task-manager/issues"
+	},
+	"homepage": "https://github.com/HIMDanny/kanban-task-manager#readme",
+	"workspaces": [
+		"backend",
+		"client"
+	]
+}
