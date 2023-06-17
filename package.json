@@ -2,6 +2,11 @@
 	"name": "kanban-task-manager",
 	"version": "1.0.0",
 	"description": "App for task management",
+	"private": true,
+	"engines": {
+		"node": "18.x.x",
+		"npm": "9.x.x"
+	  },
 	"scripts": {},
 	"repository": {
 		"type": "git",
