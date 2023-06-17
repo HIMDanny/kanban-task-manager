@@ -28,6 +28,7 @@
 	"devDependencies": {
 		"@commitlint/cli": "^17.6.5",
 		"@ls-lint/ls-lint": "^2.0.0",
+		"eslint": "^8.43.0",
 		"eslint-plugin-import": "^2.27.5",
 		"husky": "^8.0.0",
 		"lint-staged": "^13.2.2",
