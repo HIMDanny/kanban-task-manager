@@ -8,7 +8,7 @@ module.exports = {
     'plugin:sonarjs/recommended',
     'plugin:import/recommended',
     'plugin:import/typescript',
-    'prettier'
+    'prettier',
   ],
 
   settings: {
@@ -22,9 +22,9 @@ module.exports = {
     sourceType: 'module',
     project: [
       './tsconfig.json',
-    './backend/tsconfig.json',
-    './client/tsconfig.json'
-    ]
+      './backend/tsconfig.json',
+      './client/tsconfig.json',
+    ],
   },
   ignorePatterns: ['.eslintrc.js', 'commitlint.config.ts'],
   rules: {
@@ -32,6 +32,6 @@ module.exports = {
     'simple-import-sort/exports': 'error',
     'import/first': 'error',
     'import/newline-after-import': 'error',
-    'import/no-duplicates': 'error'
+    'import/no-duplicates': 'error',
   }, //TODO: Add rules
-}
+};

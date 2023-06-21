@@ -3,11 +3,9 @@ module.exports = {
   parserOptions: {
     tsconfigRootDir: __dirname,
     sourceType: 'module',
-    project: './tsconfig.json'
+    project: './tsconfig.json',
   },
-  extends: [
-    "../.eslintrc.js"
-  ],
+  extends: ['../.eslintrc.js'],
   env: {
     node: true,
     jest: true,
@@ -21,10 +19,10 @@ module.exports = {
   }, //TODO: Add rules
   overrides: [
     {
-      files: ["app.module.ts"],
+      files: ['app.module.ts'],
       rules: {
-        '@typescript-eslint/no-extraneous-class': 'off'
-      }
-    }
-  ]
+        '@typescript-eslint/no-extraneous-class': 'off',
+      },
+    },
+  ],
 };
