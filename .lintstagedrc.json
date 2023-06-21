@@ -1,10 +1,4 @@
 {
-	"*.{ts,tsx}": [
-		"eslint",
-		"prettier --write"
-	],
-	"./client/**/*.{ts,tsx}": [
-		"stylelint"
-	],
-	"*.md": "prettier --write"
+  "*.{ts,tsx,json,md,scss,html}": "npm run lint:prettify",
+  "*": ["npm run lint:ls"]
 }

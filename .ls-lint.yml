@@ -12,3 +12,5 @@ ignore:
   - commitlint.config.ts
   - client/vite.config.ts
   - backend/test
+  - backend/node_modules
+  - client/node_modules
