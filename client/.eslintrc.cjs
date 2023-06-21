@@ -14,8 +14,16 @@ module.exports = {
   ignorePatterns: ['.eslintrc.cjs'],
   rules: {
     'react-refresh/only-export-components': 'warn',
-    'unicorn/filename-case': 'off'
-  }, //TODO: Add rules
+    'unicorn/filename-case': 'off',
+    "react/self-closing-comp": ["error", {
+      "component": true,
+      "html": true
+    }],
+    "react-hooks/exhaustive-deps": "error",
+    "react/jsx-no-bind": ["error", {
+      "ignoreRefs": true
+    }]
+  },
   overrides: [
     {
       files: ["vite-env.d.ts"],
