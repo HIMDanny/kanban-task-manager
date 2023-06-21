@@ -15,7 +15,7 @@ module.exports = {
   rules: {
     'react-refresh/only-export-components': 'warn',
     'unicorn/filename-case': 'off'
-  },
+  }, //TODO: Add rules
   overrides: [
     {
       files: ["vite-env.d.ts"],

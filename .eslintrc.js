@@ -26,5 +26,5 @@ module.exports = {
     ]
   },
   ignorePatterns: ['.eslintrc.js', 'commitlint.config.ts'],
-  rules: {},
+  rules: {}, //TODO: Add rules
 }
