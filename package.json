@@ -3,13 +3,12 @@
   "version": "1.0.0",
   "description": "App for task management",
   "scripts": {
-    "prettify": "prettier --write \"**/*.{ts,tsx,json,md,scss,html,js}\"",
+    "prettify": "prettier --write \"**/*.{ts,tsx,json,md,scss,html,js,cjs}\"",
     "prepare": "husky install",
-    "lint:ls": "ls-lint",
     "lint:css": "npm run lint:css --workspaces --if-present",
     "lint": "npm run lint --workspaces --if-present",
     "lint:prettify": "prettier --check \"**/*.{ts,tsx,json,md,scss,html,js}\"",
-    "lint:all": "npm run lint:prettify && npm run lint:ls && npm run lint:css && npm run lint"
+    "lint:all": "npm run lint:prettify && npm run lint:css && npm run lint"
   },
   "private": true,
   "engines": {
@@ -39,6 +38,7 @@
     "eslint-config-prettier": "8.8.0",
     "eslint-config-standard-with-typescript": "35.0.0",
     "eslint-import-resolver-typescript": "3.5.5",
+    "eslint-plugin-function-name": "2.0.1",
     "eslint-plugin-import": "2.27.5",
     "eslint-plugin-n": "15.7.0",
     "eslint-plugin-promise": "6.1.1",
@@ -50,5 +50,8 @@
     "lint-staged": "13.2.2",
     "prettier": "2.8.8",
     "typescript": "5.1.3"
+  },
+  "dependencies": {
+    "eslint-plugin-typescript-sort-keys": "2.3.0"
   }
 }

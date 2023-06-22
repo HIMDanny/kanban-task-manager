@@ -12,7 +12,8 @@
     "build": "tsc && vite build",
     "lint:js": "npx eslint \"src/**/*.{ts,tsx}\"",
     "lint:css": "npx stylelint ./src/**/*.tsx",
-    "lint": "npm run lint:js && npm run lint:css",
+    "lint:prettify": "prettier --check \"**/*.{ts,tsx,json,md,scss,html,js,cjs}\"",
+    "lint": "npm run lint:prettify && npm run lint:js && npm run lint:css",
     "preview": "vite preview"
   },
   "dependencies": {
