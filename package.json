@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "App for task management",
   "scripts": {
-    "prettify": "prettier --write \"**/*.{ts,tsx,json,md,scss,html,js}\"",
+    "prettify": "prettier --write \"**/*.{ts,tsx,json,md,scss,html,js,cjs}\"",
     "prepare": "husky install",
     "lint:ls": "ls-lint",
     "lint:css": "npm run lint:css --workspaces --if-present",
