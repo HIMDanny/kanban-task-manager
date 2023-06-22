@@ -1,5 +1,9 @@
-import { Test, TestingModule } from '@nestjs/testing';
+import type { TestingModule } from '@nestjs/testing';
+import { Test } from '@nestjs/testing';
+
+// eslint-disable-next-line import/extensions
 import { AppController } from './app.controller';
+// eslint-disable-next-line import/extensions
 import { AppService } from './app.service';
 
 describe('AppController', () => {
