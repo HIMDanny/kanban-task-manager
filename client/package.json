@@ -6,11 +6,13 @@
   "engines": {
     "node": "18.x.x",
     "npm": "9.x.x"
-	  },
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:js": "npx eslint \"src/**/*.{ts,tsx}\"",
+    "lint:css": "npx stylelint ./src/**/*.tsx",
+    "lint": "npm run lint:js && npm run lint:css",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -24,8 +26,14 @@
     "@typescript-eslint/parser": "^5.59.0",
     "@vitejs/plugin-react": "^4.0.0",
     "eslint": "^8.38.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
+    "eslint-plugin-sonar": "^0.12.0",
+    "eslint-plugin-unicorn": "^47.0.0",
+    "postcss-styled-syntax": "^0.4.0",
+    "stylelint": "^15.7.0",
+    "stylelint-config-standard": "^33.0.0",
     "typescript": "^5.0.2",
     "vite": "^4.3.9"
   }
