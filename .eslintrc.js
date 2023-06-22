@@ -80,5 +80,7 @@ module.exports = {
     'import/newline-after-import': ['error', '1'],
     'import/extensions': ['error', 'always', { ignorePackages: true }],
     'import/newline-after-import': ['error', { count: 1 }],
+    'unicorn/no-null': 'off',
+    'unicorn/prefer-top-level-await': 'off',
   },
 };
