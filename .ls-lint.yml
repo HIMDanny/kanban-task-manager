@@ -1,5 +1,4 @@
 ls:
-  client:
   .ts: kebab-case | camelCase
   .tsx: kebab-case | PascalCase
   .d.ts: kebab-case

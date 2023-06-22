@@ -5,11 +5,10 @@
   "scripts": {
     "prettify": "prettier --write \"**/*.{ts,tsx,json,md,scss,html,js,cjs}\"",
     "prepare": "husky install",
-    "lint:ls": "ls-lint",
     "lint:css": "npm run lint:css --workspaces --if-present",
     "lint": "npm run lint --workspaces --if-present",
     "lint:prettify": "prettier --check \"**/*.{ts,tsx,json,md,scss,html,js}\"",
-    "lint:all": "npm run lint:prettify && npm run lint:ls && npm run lint:css && npm run lint"
+    "lint:all": "npm run lint:prettify && npm run lint:css && npm run lint"
   },
   "private": true,
   "engines": {
