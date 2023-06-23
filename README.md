@@ -27,6 +27,44 @@ Soon
 
 Soon
 
+```mermaid
+erDiagram
+ board {
+    int id PK
+    dateTime created_at
+    dateTime updated_at
+    varchar name
+  }
+  column {
+    int id PK
+    dateTime created_at
+    dateTime updated_at
+    varchar name
+    bytea color
+  }
+
+ board ||--|{ task : board_id
+ column ||--|{ task : column_id
+  task {
+    int id PK
+    dateTime created_at
+    dateTime updated_at
+    int board_id FK
+    int column_id FK
+    varchar title
+    text description "may be null if user doesn't provide description"
+    varchar status FK
+  }
+  task ||--|{ subtask : task_id
+  subtask {
+    int id PK
+    dateTime created_at
+    dateTime updated_at
+    int task_id FK
+    varchar title
+  }
+```
+
 ## Application schema
 
 Soon
