@@ -22,6 +22,35 @@ module.exports = {
       files: ['app.module.ts'],
       rules: {
         '@typescript-eslint/no-extraneous-class': 'off',
+        'no-restricted-syntax': 'off',
+      },
+    },
+    {
+      files: ['main.ts'],
+      rules: {
+        'function-name/starts-with-verb': 'off',
+        '@typescript-eslint/no-floating-promises': 'off',
+      },
+    },
+    {
+      files: ['board.module.ts'],
+      rules: {
+        'no-restricted-syntax': 'off',
+        '@typescript-eslint/no-extraneous-class': 'off',
+      },
+    },
+    {
+      files: ['prisma.service.ts'],
+      rules: {
+        '@typescript-eslint/require-await': 'off',
+        '@typescript-eslint/no-misused-promises': 'off',
+      },
+    },
+    {
+      files: ['prisma.module.ts'],
+      rules: {
+        'no-restricted-syntax': 'off',
+        '@typescript-eslint/no-extraneous-class': 'off',
       },
     },
   ],
