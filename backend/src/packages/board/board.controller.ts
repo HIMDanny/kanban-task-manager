@@ -10,25 +10,25 @@ import {
   ValidationPipe,
 } from '@nestjs/common';
 
+import { BoardService } from './board.service';
 import type {
   BoardCreateResponseDto,
   BoardDeleteResponseDto,
   BoardGetAllItemsResponseDto,
   BoardGetOneItemResponseDto,
   BoardUpdateResponseDto,
-} from '../libs/dto/dto';
+} from './libs/dto/dto';
 import {
   BoardCreateRequestDto,
   BoardGetOneItemRequestDto,
   BoardUpdateRequestDto,
-} from '../libs/dto/dto';
-import { ZodValidationPipe } from '../libs/helpers/pipes/pipes';
+} from './libs/dto/dto';
+import { ZodValidationPipe } from './libs/helpers/pipes/pipes';
 import {
   BoardCreateSchema,
   BoardUpdateBodySchema,
   BoardValidateParametersSchema,
-} from '../libs/validation-schemas/validation-schemas';
-import { BoardService } from './board.service';
+} from './libs/validation-schemas/validation-schemas';
 
 @Controller('boards')
 class BoardController {

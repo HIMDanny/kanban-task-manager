@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 
+import { BoardRepository } from './board.repository';
 import type {
   BoardCreateRequestDto,
   BoardCreateResponseDto,
@@ -9,9 +10,8 @@ import type {
   BoardGetOneItemResponseDto,
   BoardUpdateRequestDto,
   BoardUpdateResponseDto,
-} from '../libs/dto/dto';
-import { mapToDto } from '../libs/helpers/maps/map-to-dto';
-import { BoardRepository } from './board.repository';
+} from './libs/dto/dto';
+import { mapToDto } from './libs/helpers/maps/map-to-dto';
 
 @Injectable()
 class BoardService {
