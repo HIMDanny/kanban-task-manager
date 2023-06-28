@@ -1,12 +1,14 @@
 import { NestFactory } from '@nestjs/core';
+import type { NestFastifyApplication } from '@nestjs/platform-fastify';
+import { FastifyAdapter } from '@nestjs/platform-fastify';
 
-// eslint-disable-next-line import/extensions
 import { AppModule } from './app.module';
 
-// eslint-disable-next-line function-name/starts-with-verb
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create<NestFastifyApplication>(
+    AppModule,
+    new FastifyAdapter(),
+  );
   await app.listen(3000);
 }
-// eslint-disable-next-line @typescript-eslint/no-floating-promises
 bootstrap();

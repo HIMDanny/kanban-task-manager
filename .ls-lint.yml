@@ -4,7 +4,7 @@ ls:
   .d.ts: kebab-case
 
   backend:
-    .ts: point.case | kebab-case
+    .ts: regex:([.a-z0-9]*)([-.][a-z0-9]+)*
 
 ignore:
   - .git
