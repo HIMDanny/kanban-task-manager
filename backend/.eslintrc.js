@@ -53,5 +53,11 @@ module.exports = {
         '@typescript-eslint/no-extraneous-class': 'off',
       },
     },
+    {
+      files: ['board.repository.ts'],
+      rules: {
+        '@typescript-eslint/require-await': 'off',
+      },
+    },
   ],
 };
