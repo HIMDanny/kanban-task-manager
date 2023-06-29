@@ -47,6 +47,10 @@ const GlobalStyle = createGlobalStyle`
     color: inherit;
     text-decoration: none;
   }
+	
+	body {
+		font-family: 'Plus Jakarta Sans', sans-serif;
+	}
 `;
 
 export { GlobalStyle };
