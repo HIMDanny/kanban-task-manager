@@ -14,7 +14,6 @@ interface IconProperties {
   icon: IconType;
 }
 
-// eslint-disable-next-line react/prop-types
 const Icon: React.FC<IconProperties> = ({ icon }) => {
   switch (icon) {
     case 'board': {
