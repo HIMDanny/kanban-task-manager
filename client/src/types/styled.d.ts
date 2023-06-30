@@ -27,6 +27,4 @@ declare module 'styled-components' {
       white: string;
     };
   }
-
-  export type { DefaultTheme };
 }
