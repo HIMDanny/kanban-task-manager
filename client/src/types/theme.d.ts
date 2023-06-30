@@ -6,7 +6,7 @@ declare module 'styled-components' {
       line: string;
       mainBackground: string;
     };
-    pallete: {
+    palette: {
       black: string;
       grey: {
         300: string;
@@ -18,6 +18,10 @@ declare module 'styled-components' {
       };
       primary: {
         light: string;
+        main: string;
+      };
+      purple: {
+        hover: string;
         main: string;
       };
       red: {
