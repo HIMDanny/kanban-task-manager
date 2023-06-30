@@ -14,40 +14,22 @@ interface IconProperties {
   icon: IconType;
 }
 
-const Icon: React.FC<IconProperties> = ({ icon }) => {
-  switch (icon) {
-    case 'board': {
-      return <BoardIcon />;
-    }
-    case 'cancel': {
-      return <CancelIcon />;
-    }
-    case 'check': {
-      return <CheckIcon />;
-    }
-    case 'chevron': {
-      return <ChevronDownIcon />;
-    }
-    case 'eye': {
-      return <EyeIcon />;
-    }
-    case 'eye-slash': {
-      return <EyeSlashIcon />;
-    }
-    case 'menu': {
-      return <MenuIcon />;
-    }
-    case 'moon': {
-      return <MoonIcon />;
-    }
-    case 'sun': {
-      return <SunIcon />;
-    }
+const icons: Record<IconType, React.FC<React.SVGProps<SVGSVGElement>>> = {
+  board: BoardIcon,
+  cancel: CancelIcon,
+  check: CheckIcon,
+  chevron: ChevronDownIcon,
+  eye: EyeIcon,
+  'eye-slash': EyeSlashIcon,
+  menu: MenuIcon,
+  moon: MoonIcon,
+  sun: SunIcon,
+};
 
-    default: {
-      return;
-    }
-  }
+const Icon: React.FC<IconProperties> = ({ icon }) => {
+  const Svg = icons[icon];
+
+  return <Svg />;
 };
 
 export { Icon, type IconProperties };
