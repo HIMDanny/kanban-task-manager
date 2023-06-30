@@ -4,7 +4,7 @@ type IconType =
   | 'check'
   | 'chevron'
   | 'eye'
-  | 'eye-slash'
+  | 'eyeSlash'
   | 'menu'
   | 'moon'
   | 'sun';

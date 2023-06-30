@@ -20,7 +20,7 @@ const icons: Record<IconType, React.FC<React.SVGProps<SVGSVGElement>>> = {
   check: CheckIcon,
   chevron: ChevronDownIcon,
   eye: EyeIcon,
-  'eye-slash': EyeSlashIcon,
+  eyeSlash: EyeSlashIcon,
   menu: MenuIcon,
   moon: MoonIcon,
   sun: SunIcon,
