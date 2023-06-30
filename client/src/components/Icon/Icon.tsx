@@ -1,3 +1,5 @@
+import type { IconType } from 'client/src/types/icon';
+
 import { BoardIcon } from './BoardIcon';
 import { CancelIcon } from './CancelIcon';
 import { CheckIcon } from './CheckIcon';
@@ -7,17 +9,6 @@ import { EyeSlashIcon } from './EyeSlashIcon';
 import { MenuIcon } from './MenuIcon';
 import { MoonIcon } from './MoonIcon';
 import { SunIcon } from './SunIcon';
-
-type IconType =
-  | 'board'
-  | 'cancel'
-  | 'check'
-  | 'chevron'
-  | 'eye'
-  | 'eye-slash'
-  | 'menu'
-  | 'moon'
-  | 'sun';
 
 interface IconProperties {
   icon: IconType;
