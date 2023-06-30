@@ -3,8 +3,8 @@ import {
   destructive,
   primary,
   secondary,
-} from 'client/src/components/button/styles';
-import type { ButtonStyle } from 'client/src/components/button/utils/interfaces/interfaces';
+} from 'client/src/components/button/styles/styles';
+import type { ButtonStyle } from 'client/src/components/button/utils/interfaces/button-style.interface';
 
 const getButtonStyles = (style: Properties['variant']): ButtonStyle => {
   const styles: Record<Properties['variant'], ButtonStyle> = {

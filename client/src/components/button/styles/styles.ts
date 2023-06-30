@@ -1,8 +1,5 @@
 import { palette } from 'client/src/assets/styles/palette';
-import type {
-  ButtonSize,
-  ButtonStyle,
-} from 'client/src/components/button/utils/interfaces/interfaces';
+import type { ButtonStyle } from 'client/src/components/button/utils/interfaces/button-style.interface';
 
 const primary: ButtonStyle = {
   background: palette.purple.main,
@@ -37,14 +34,4 @@ const destructive: ButtonStyle = {
   hoverBackground: palette.red.light,
 } as const;
 
-const primaryL: ButtonSize = {
-  width: '255px',
-  height: '48px',
-};
-
-const primaryS: ButtonSize = {
-  width: '255px',
-  height: '40px',
-};
-
-export { destructive, primary, primaryL, primaryS, secondary };
+export { destructive, primary, secondary };

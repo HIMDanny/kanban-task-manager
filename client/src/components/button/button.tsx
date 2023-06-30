@@ -2,11 +2,12 @@ import { ButtonWrapper } from './components/button-wrapper/ButtonWrapper';
 
 interface Properties {
   className?: string;
+  height: string;
   onClick?: () => void;
-  size: 'large' | 'small';
   text?: string;
   type: 'button' | 'submit';
   variant: 'primary' | 'secondary' | 'destructive';
+  width: string;
 }
 
 const Button: React.FC<Properties> = ({
@@ -15,7 +16,8 @@ const Button: React.FC<Properties> = ({
   type = 'button',
   className,
   variant = 'primary',
-  size = 'small',
+  width,
+  height,
 }: Properties) => {
   return (
     <ButtonWrapper
@@ -23,7 +25,8 @@ const Button: React.FC<Properties> = ({
       type={type}
       className={className}
       variant={variant}
-      size={size}
+      width={width}
+      height={height}
     >
       {text}
     </ButtonWrapper>
