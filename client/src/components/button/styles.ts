@@ -2,7 +2,7 @@ import { palette } from 'client/src/assets/styles/palette';
 import type {
   ButtonSize,
   ButtonStyle,
-} from 'client/src/components/utils/interfaces/interfaces';
+} from 'client/src/components/button/utils/interfaces/interfaces';
 
 const primary: ButtonStyle = {
   background: palette.purple.main,

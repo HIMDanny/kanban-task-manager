@@ -4,7 +4,7 @@ import {
   primary,
   secondary,
 } from 'client/src/components/button/styles';
-import type { ButtonStyle } from 'client/src/components/utils/interfaces/interfaces';
+import type { ButtonStyle } from 'client/src/components/button/utils/interfaces/interfaces';
 
 const getButtonStyles = (style: Properties['variant']): ButtonStyle => {
   const styles: Record<Properties['variant'], ButtonStyle> = {
