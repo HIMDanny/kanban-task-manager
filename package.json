@@ -9,7 +9,7 @@
     "lint:js": "npm run lint:js --workspaces --if-present",
     "lint:type": "npm run lint:type --workspaces --if-present",
     "lint:prettify": "npm run lint:prettify --workspaces --if-present",
-    "lint:all": "npm run lint:prettify && npm run lint:css && npm run lint:js"
+    "lint:all": "npm run lint:prettify && npm run lint:css && npm run lint:type && npm run lint:js"
   },
   "private": true,
   "engines": {
