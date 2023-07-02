@@ -25,7 +25,7 @@ class BoardService {
   ): Promise<BoardGetOneItemResponseDto | null> {
     const board = await this.boardRepository.findBoard(boardWhereUniqueInput);
     if (board) {
-      this.logger.log(`Found board with ID ${board.id}`, board);
+      this.logger.log(`Found board with ID ${board.id}`, { board });
       return mapToDto(board);
     }
     return null;
@@ -33,7 +33,7 @@ class BoardService {
 
   async findBoards(): Promise<BoardGetAllItemsResponseDto[]> {
     const boards = await this.boardRepository.findBoards({});
-    this.logger.log(`Retrieved ${boards.length} boards`, boards);
+    this.logger.log(`Retrieved ${boards.length} boards`, { boards });
     return boards.map((board) => mapToDto(board));
   }
 
@@ -41,7 +41,9 @@ class BoardService {
     data: BoardCreateRequestDto,
   ): Promise<BoardCreateResponseDto> {
     const createdBoard = await this.boardRepository.createBoard(data);
-    this.logger.log(`Created board with ID ${createdBoard.id}`, createdBoard);
+    this.logger.log(`Created board with ID ${createdBoard.id}`, {
+      createdBoard,
+    });
     return mapToDto(createdBoard);
   }
 
@@ -50,7 +52,9 @@ class BoardService {
     where: BoardGetOneItemRequestDto;
   }): Promise<BoardUpdateResponseDto> {
     const updatedBoard = await this.boardRepository.updateBoard(parameters);
-    this.logger.log(`Updated board with ID ${updatedBoard.id}`, updatedBoard);
+    this.logger.log(`Updated board with ID ${updatedBoard.id}`, {
+      updatedBoard,
+    });
     return mapToDto(updatedBoard);
   }
 
@@ -58,7 +62,9 @@ class BoardService {
     where: BoardGetOneItemRequestDto,
   ): Promise<BoardDeleteResponseDto> {
     const deletedBoard = await this.boardRepository.deleteBoard(where);
-    this.logger.log(`Deleted board with ID ${deletedBoard.id}`, deletedBoard);
+    this.logger.log(`Deleted board with ID ${deletedBoard.id}`, {
+      deletedBoard,
+    });
     return mapToDto(deletedBoard);
   }
 }
