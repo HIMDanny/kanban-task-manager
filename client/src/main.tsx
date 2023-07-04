@@ -11,6 +11,7 @@ import { router } from './components/router/router.tsx';
 ReactDOM.createRoot(document.querySelector('#root') as HTMLElement).render(
   <React.StrictMode>
     <GlobalStyle />
+
     <ThemeProvider theme={light}>
       <RouterProvider router={router} />
     </ThemeProvider>
