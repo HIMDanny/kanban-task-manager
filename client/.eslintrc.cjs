@@ -33,6 +33,7 @@ module.exports = {
         ignoreRefs: true,
       },
     ],
+    'react/prop-types': 'off',
   },
   overrides: [
     {
