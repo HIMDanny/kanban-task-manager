@@ -4,7 +4,7 @@ import { ReactComponent as LogoIcon } from '../assets/icons/logo-icon.svg';
 import { ReactComponent as LogoText } from '../assets/icons/logo-text.svg';
 
 const Text = styled(LogoText)`
-  color: ${({ theme }): string => theme.palette.primary.contrastText};
+  color: ${({ theme }): string => theme.palette.text.primary};
   display: none;
 
   @media (width >= 768px) {
