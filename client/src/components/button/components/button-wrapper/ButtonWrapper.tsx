@@ -18,7 +18,7 @@ const ButtonWrapper = styled.button<Properties>`
         return css`
           background: ${theme.palette.primary.main};
           color: ${theme.palette.white};
-          
+
           &:hover {
             background: ${theme.palette.primary.light};
           }
@@ -28,7 +28,7 @@ const ButtonWrapper = styled.button<Properties>`
         return css`
           background: ${theme.palette.red.main};
           color: ${theme.palette.white};
-          
+
           &:hover {
             background: ${theme.palette.red.light};
           }
@@ -38,7 +38,7 @@ const ButtonWrapper = styled.button<Properties>`
         return css`
           background: hsl(242deg 48% 58% / 10%);
           color: ${theme.palette.primary.main};
-          
+
           &:hover {
             background: hsl(242deg 48% 58% / 25%);
           }
