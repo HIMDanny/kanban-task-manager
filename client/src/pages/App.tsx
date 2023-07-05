@@ -1,5 +1,4 @@
-import { Button } from 'client/src/components/button/Button';
-
+import { Button } from '../components/Button';
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 const App: React.FC = () => {
   return (

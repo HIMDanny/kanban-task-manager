@@ -1,7 +1,6 @@
+import type { Properties } from 'client/src/components/Button';
 import { getButtonStyles } from 'client/src/components/button/utils/helpers/get-button-styles/get-button-styles.helper';
 import styledComponents, { css } from 'styled-components';
-
-import type { Properties } from '../../Button';
 
 const ButtonWrapper = styledComponents.button<Properties>(({ variant }) => {
   const {

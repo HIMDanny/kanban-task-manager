@@ -1,4 +1,4 @@
-import { ButtonWrapper } from './components/button-wrapper/ButtonWrapper';
+import { ButtonWrapper } from 'client/src/components/button/components/button-wrapper/ButtonWrapper';
 
 interface Properties {
   className?: string;
