@@ -22,14 +22,6 @@ const ButtonWrapper = styled.button<Properties>`
           background: ${theme.palette.primary.light};
         }
       `,
-      destructive: css`
-        background: ${theme.palette.red.main};
-        color: ${theme.palette.white};
-
-        &:hover {
-          background: ${theme.palette.red.light};
-        }
-      `,
       secondary: css`
         background: hsl(242deg 48% 58% / 10%);
         color: ${theme.palette.primary.main};
@@ -38,8 +30,15 @@ const ButtonWrapper = styled.button<Properties>`
           background: hsl(242deg 48% 58% / 25%);
         }
       `,
-    };
+      destructive: css`
+        background: ${theme.palette.red.main};
+        color: ${theme.palette.white};
 
+        &:hover {
+          background: ${theme.palette.red.light};
+        }
+      `,
+    };
     return variantStyles[variant];
   }}
 `;
