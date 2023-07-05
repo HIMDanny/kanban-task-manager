@@ -6,7 +6,7 @@ declare module 'styled-components' {
       line: string;
       mainBackground: string;
     };
-    pallete: {
+    palette: {
       black: string;
       grey: {
         300: string;
