@@ -17,6 +17,7 @@ declare module 'styled-components' {
         800: string;
       };
       primary: {
+        contrastText: string;
         light: string;
         main: string;
       };
