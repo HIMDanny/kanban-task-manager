@@ -1,4 +1,4 @@
-import type { Properties } from 'client/src/components/Button';
+import type { Properties } from 'client/src/components/button/Button';
 import {
   destructive,
   primary,

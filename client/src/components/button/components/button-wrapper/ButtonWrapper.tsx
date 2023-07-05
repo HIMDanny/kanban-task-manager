@@ -1,4 +1,4 @@
-import type { Properties } from 'client/src/components/Button';
+import type { Properties } from 'client/src/components/button/Button';
 import { getButtonStyles } from 'client/src/components/button/utils/helpers/get-button-styles/get-button-styles.helper';
 import styledComponents, { css } from 'styled-components';
 
