@@ -1,6 +1,6 @@
 import type { DefaultTheme } from 'styled-components';
 
-const pallete = {
+const palette = {
   primary: {
     main: 'hsl(242, 48%, 58%)',
     light: 'hsl(242, 100%, 82%)',
@@ -22,18 +22,18 @@ const pallete = {
 } as const;
 
 const light: DefaultTheme = {
-  pallete,
+  palette,
   components: {
-    mainBackground: pallete.grey[300],
-    line: pallete.grey[400],
+    mainBackground: palette.grey[300],
+    line: palette.grey[400],
   },
 };
 
 const dark: DefaultTheme = {
-  pallete,
+  palette,
   components: {
-    mainBackground: pallete.grey[800],
-    line: pallete.grey[600],
+    mainBackground: palette.grey[800],
+    line: palette.grey[600],
   },
 };
 

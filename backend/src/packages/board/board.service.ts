@@ -1,4 +1,4 @@
-import { Injectable, Logger } from '@nestjs/common';
+import { Injectable, Logger, NotFoundException } from '@nestjs/common';
 
 import { BoardRepository } from './board.repository';
 import type {
@@ -28,7 +28,7 @@ class BoardService {
       this.logger.log(`Found board with ID ${board.id}`, { board });
       return mapToDto(board);
     }
-    return null;
+    throw new NotFoundException('Board not found');
   }
 
   async findBoards(): Promise<BoardGetAllItemsResponseDto[]> {
