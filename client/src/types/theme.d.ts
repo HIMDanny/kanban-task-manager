@@ -20,10 +20,6 @@ declare module 'styled-components' {
         light: string;
         main: string;
       };
-      purple: {
-        hover: string;
-        main: string;
-      };
       red: {
         light: string;
         main: string;
