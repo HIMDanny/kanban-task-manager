@@ -81,10 +81,5 @@ module.exports = {
     'import/newline-after-import': ['error', { count: 1 }],
     'unicorn/no-null': 'off',
     'unicorn/prefer-top-level-await': 'off',
-    '@typescript-eslint/no-unsafe-assignment': 'warn',
-    '@typescript-eslint/no-unsafe-member-access': 'warn',
-    '@typescript-eslint/no-unsafe-argument': 'warn',
-    '@typescript-eslint/no-unsafe-call': 'warn',
-    '@typescript-eslint/no-unsafe-return': 'warn',
   },
 };
