@@ -1,33 +1,51 @@
-import type { Properties } from 'client/src/components/button/Button';
-import { getButtonStyles } from 'client/src/components/button/utils/helpers/get-button-styles/get-button-styles.helper';
-import styledComponents, { css } from 'styled-components';
+import { css, styled } from 'styled-components';
 
-const ButtonWrapper = styledComponents.button<Properties>(({ variant }) => {
-  const {
-    background,
-    color,
-    fontSize,
-    fontWeight,
-    lineHeight,
-    borderRadius,
-    border,
-    hoverBackground,
-  } = getButtonStyles(variant);
+import type { Properties } from '../../Button';
 
-  return css`
-    background: ${background};
-    color: ${color};
-    font-size: ${fontSize};
-    font-weight: ${fontWeight};
-    line-height: ${lineHeight};
-    border-radius: ${borderRadius};
-    border: ${border};
-    padding: 10px 20px;
+const ButtonWrapper = styled.button<Properties>`
+  border: none;
+  border-radius: 20px;
+  font-size: 13px;
+  line-height: 23px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  padding: 9px 69px;
 
-    &:hover {
-      background: ${hoverBackground};
+  ${({ variant, theme }): ReturnType<typeof css> => {
+    switch (variant) {
+      case 'primary': {
+        return css`
+          background: ${theme.palette.primary.main};
+          color: ${theme.palette.white};
+          
+          &:hover {
+            background: ${theme.palette.primary.light};
+          }
+        `;
+      }
+      case 'destructive': {
+        return css`
+          background: ${theme.palette.red.main};
+          color: ${theme.palette.white};
+          
+          &:hover {
+            background: ${theme.palette.red.light};
+          }
+        `;
+      }
+      case 'secondary': {
+        return css`
+          background: hsl(242deg 48% 58% / 10%);
+          color: ${theme.palette.primary.main};
+          
+          &:hover {
+            background: hsl(242deg 48% 58% / 25%);
+          }
+        `;
+      }
     }
-  `;
-});
+  }}
+`;
 
 export { ButtonWrapper };

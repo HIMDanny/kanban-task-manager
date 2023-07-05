@@ -5,7 +5,7 @@ interface Properties {
   onClick?: () => void;
   text?: string;
   type: 'button' | 'submit';
-  variant: 'primary' | 'secondary' | 'destructive';
+  variant: 'primary' | 'destructive' | 'secondary';
 }
 
 const Button: React.FC<Properties> = ({
@@ -27,5 +27,5 @@ const Button: React.FC<Properties> = ({
   );
 };
 
-export { Button };
 export type { Properties };
+export { Button };
