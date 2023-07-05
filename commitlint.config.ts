@@ -1,7 +1,7 @@
 import type { UserConfig } from '@commitlint/types';
 
 const COMMIT_MODIFIERS = ['+', '*', '-'];
-const COMMIT_MESSAGE_REGEXP = /^ktm-\d+: (\+|\*|\-) .*$/;
+const COMMIT_MESSAGE_REGEXP = /^(develop|(ktm-\d+))+: (\+|\*|\-) .*$/;
 const COMMIT_MESSAGE_MATCH_RULE_MESSAGE = `
 commit message doesn't match format requirements
 Commit message must have one of the following formats:
@@ -18,12 +18,7 @@ const Configuration: UserConfig = {
   parserPreset: {
     parserOpts: {
       headerPattern: COMMIT_MESSAGE_REGEXP,
-      headerCorrespondence: [
-        'prefix',
-        'issue-number',
-        'modifier',
-        'description',
-      ],
+      headerCorrespondence: ['prefix', 'modifier', 'description'],
     },
   },
   defaultIgnores: true,
