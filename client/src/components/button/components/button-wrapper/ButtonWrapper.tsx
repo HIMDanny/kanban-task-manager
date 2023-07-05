@@ -13,38 +13,34 @@ const ButtonWrapper = styled.button<Properties>`
   padding: 9px 69px;
 
   ${({ variant, theme }): ReturnType<typeof css> => {
-    switch (variant) {
-      case 'primary': {
-        return css`
-          background: ${theme.palette.primary.main};
-          color: ${theme.palette.white};
+    const variantStyles = {
+      primary: css`
+        background: ${theme.palette.primary.main};
+        color: ${theme.palette.white};
 
-          &:hover {
-            background: ${theme.palette.primary.light};
-          }
-        `;
-      }
-      case 'destructive': {
-        return css`
-          background: ${theme.palette.red.main};
-          color: ${theme.palette.white};
+        &:hover {
+          background: ${theme.palette.primary.light};
+        }
+      `,
+      destructive: css`
+        background: ${theme.palette.red.main};
+        color: ${theme.palette.white};
 
-          &:hover {
-            background: ${theme.palette.red.light};
-          }
-        `;
-      }
-      case 'secondary': {
-        return css`
-          background: hsl(242deg 48% 58% / 10%);
-          color: ${theme.palette.primary.main};
+        &:hover {
+          background: ${theme.palette.red.light};
+        }
+      `,
+      secondary: css`
+        background: hsl(242deg 48% 58% / 10%);
+        color: ${theme.palette.primary.main};
 
-          &:hover {
-            background: hsl(242deg 48% 58% / 25%);
-          }
-        `;
-      }
-    }
+        &:hover {
+          background: hsl(242deg 48% 58% / 25%);
+        }
+      `,
+    };
+
+    return variantStyles[variant];
   }}
 `;
 
