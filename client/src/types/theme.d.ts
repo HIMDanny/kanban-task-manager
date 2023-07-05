@@ -25,6 +25,10 @@ declare module 'styled-components' {
         light: string;
         main: string;
       };
+      text: {
+        primary: string;
+        secondary: string;
+      };
       white: string;
     };
   }

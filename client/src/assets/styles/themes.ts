@@ -4,9 +4,13 @@ const palette: DefaultTheme['palette'] = {
   primary: {
     main: 'hsl(242, 48%, 58%)',
     light: 'hsl(242, 100%, 82%)',
-    contrastText: 'hsl(237, 100%, 4%)',
+    contrastText: 'hsl(0, 0%, 100%)',
   },
   black: 'hsl(237, 100%, 4%)',
+  text: {
+    primary: 'hsl(237, 100%, 4%)',
+    secondary: 'hsl(216, 15%, 57%)',
+  },
   white: 'hsl(0, 0%, 100%)',
   grey: {
     300: 'hsl(220, 69%, 97%)',
@@ -33,9 +37,9 @@ const light: DefaultTheme = {
 const dark: DefaultTheme = {
   palette: {
     ...palette,
-    primary: {
-      ...palette.primary,
-      contrastText: palette.white,
+    text: {
+      ...palette.text,
+      primary: palette.white,
     },
   },
   components: {
