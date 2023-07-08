@@ -1,9 +1,5 @@
 import { z } from 'zod';
 
-const BoardValidateParametersSchema = z
-  .object({
-    id: z.number().int().positive(),
-  })
-  .required();
+const BoardValidateParametersSchema = z.number().int().positive();
 
 export { BoardValidateParametersSchema };
