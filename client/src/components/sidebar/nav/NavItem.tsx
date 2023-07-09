@@ -1,7 +1,8 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink as RouterLink } from 'react-router-dom';
 import { styled } from 'styled-components';
 
 import { Icon } from '../../Icon';
+import { SidebarNavItemStyles } from './styles';
 
 interface NavItemProperties {
   href: string;
@@ -24,15 +25,6 @@ const ListItem = styled.li`
   border-bottom-right-radius: 6.25rem;
   color: ${({ theme }): string => theme.palette.grey[500]};
 
-  a {
-    padding: 0.875rem 1.5rem;
-    display: grid;
-    grid-template-columns: 1rem auto;
-    align-items: center;
-    gap: 0.75rem;
-    font-weight: 700;
-  }
-
   &:has(.active) {
     color: ${({ theme }): string => theme.palette.primary.contrastText};
     background-color: ${({ theme }): string => theme.palette.primary.main};
@@ -42,4 +34,8 @@ const ListItem = styled.li`
     background-color: ${({ theme }): string => theme.palette.primary.light};
     color: ${({ theme }): string => theme.palette.primary.contrastText};
   }
+`;
+
+const NavLink = styled(RouterLink)`
+  ${SidebarNavItemStyles}
 `;
