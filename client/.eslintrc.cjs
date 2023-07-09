@@ -1,12 +1,20 @@
 module.exports = {
-  env: { browser: true, es2020: true },
-  settings: { react: { version: 'detect' } },
+  env: {
+    browser: true,
+    es2020: true,
+  },
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
   extends: [
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:react/jsx-runtime',
     'plugin:jsx-a11y/recommended',
     '../.eslintrc.js',
+    'plugin:storybook/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -40,6 +48,12 @@ module.exports = {
       files: ['vite-env.d.ts'],
       rules: {
         'unicorn/prevent-abbreviations': 'off',
+      },
+    },
+    {
+      files: ['Button.stories.ts'],
+      rules: {
+        'import/no-default-export': 'off',
       },
     },
   ],

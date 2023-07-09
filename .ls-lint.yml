@@ -1,5 +1,5 @@
 ls:
-  .ts: regex:([.a-z0-9]*)([-.][a-z0-9]+)*
+  .ts: regex:([A-Za-z0-9]*)([-.][A-Za-z0-9]+)*
   .tsx: kebab-case | PascalCase
   .d.ts: kebab-case
 
