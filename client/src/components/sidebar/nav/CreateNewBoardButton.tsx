@@ -12,7 +12,9 @@ const CreateNewBoardButton: React.FC = () => {
 };
 export { CreateNewBoardButton };
 
-const ListButtonItem = styled.button`
+const ListButtonItem = styled.button.attrs(() => ({
+  type: 'button',
+}))`
   color: ${({ theme }): string => theme.palette.primary.main};
   background-color: transparent;
   border: none;
