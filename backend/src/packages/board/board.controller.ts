@@ -4,10 +4,9 @@ import {
   Delete,
   Get,
   Param,
+  ParseIntPipe,
   Post,
   Put,
-  UsePipes,
-  ValidationPipe,
 } from '@nestjs/common';
 
 import { BoardService } from './board.service';
@@ -18,11 +17,7 @@ import type {
   BoardGetOneItemResponseDto,
   BoardUpdateResponseDto,
 } from './libs/dto/dto';
-import {
-  BoardCreateRequestDto,
-  BoardGetOneItemRequestDto,
-  BoardUpdateRequestDto,
-} from './libs/dto/dto';
+import { BoardCreateRequestDto, BoardUpdateRequestDto } from './libs/dto/dto';
 import { ZodValidationPipe } from './libs/helpers/pipes/pipes';
 import {
   BoardCreateSchema,
@@ -40,10 +35,13 @@ class BoardController {
   }
 
   @Get(':id')
-  @UsePipes(new ValidationPipe({ transform: true }))
   async getBoardById(
-    @Param(new ZodValidationPipe(BoardValidateParametersSchema))
-    { id }: BoardGetOneItemRequestDto,
+    @Param(
+      'id',
+      ParseIntPipe,
+      new ZodValidationPipe(BoardValidateParametersSchema),
+    )
+    id: number,
   ): Promise<BoardGetOneItemResponseDto | null> {
     return this.boardService.findBoard({ id });
   }
@@ -59,10 +57,13 @@ class BoardController {
   }
 
   @Put(':id')
-  @UsePipes(new ValidationPipe({ transform: true }))
   async updateBoard(
-    @Param(new ZodValidationPipe(BoardValidateParametersSchema))
-    { id }: BoardGetOneItemRequestDto,
+    @Param(
+      'id',
+      ParseIntPipe,
+      new ZodValidationPipe(BoardValidateParametersSchema),
+    )
+    id: number,
     @Body(new ZodValidationPipe(BoardUpdateBodySchema))
     { name }: BoardUpdateRequestDto,
   ): Promise<BoardUpdateResponseDto> {
@@ -73,10 +74,13 @@ class BoardController {
   }
 
   @Delete(':id')
-  @UsePipes(new ValidationPipe({ transform: true }))
   async deleteBoard(
-    @Param(new ZodValidationPipe(BoardValidateParametersSchema))
-    { id }: BoardGetOneItemRequestDto,
+    @Param(
+      'id',
+      ParseIntPipe,
+      new ZodValidationPipe(BoardValidateParametersSchema),
+    )
+    id: number,
   ): Promise<BoardDeleteResponseDto> {
     return this.boardService.deleteBoard({ id });
   }
