@@ -1,34 +1,21 @@
+import { useGetBoardsQuery } from 'client/src/api/api-slice';
 import { styled } from 'styled-components';
 
 import { CreateNewBoardButton } from './CreateNewBoardButton';
 import { NavItem } from './NavItem';
 
-// ! for demo purpose, will be changed to api data
-const links = [
-  {
-    link: '/',
-    label: 'Platform launch',
-  },
-  {
-    link: '/214424124',
-    label: 'Marketing plan',
-  },
-  {
-    link: '/12421444',
-    label: 'Roadmap',
-  },
-];
-
 const NavList: React.FC = () => {
+  const { data: boards } = useGetBoardsQuery();
+
   return (
     <section>
-      <NavHeading>All boards ({links.length})</NavHeading>
+      <NavHeading>All boards ({boards?.length ?? 0})</NavHeading>
       <List>
-        {links.map(({ label, link }) => (
+        {boards?.map(({ id, name }) => (
           <NavItem
-            key={label}
-            label={label}
-            href={link}
+            key={id}
+            label={name}
+            href={`/${id}`}
           />
         ))}
       </List>
