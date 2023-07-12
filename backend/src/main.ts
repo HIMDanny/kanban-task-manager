@@ -10,7 +10,7 @@ async function bootstrap() {
   const app = await NestFactory.create<NestFastifyApplication>(
     AppModule,
     new FastifyAdapter(),
-    { bufferLogs: true },
+    { bufferLogs: true, cors: true },
   );
   setupSwagger(app);
   app.useLogger(app.get(Logger));
