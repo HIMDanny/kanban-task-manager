@@ -109,6 +109,111 @@
           "response": []
         }
       ]
+    },
+    {
+      "name": "columns",
+      "item": [
+        {
+          "name": "/columns",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/columns",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["columns"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/columns/:id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/columns/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["columns", "1"],
+              "query": [
+                {
+                  "key": "",
+                  "value": null,
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/columns",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Bandera\",\n    \"color\": \"#42a7f5\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/columns",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["columns"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/columns/:id",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Stepan\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/columns/2",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["columns", "2"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/columns/:id",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/columns/2",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["columns", "2"]
+            }
+          },
+          "response": []
+        }
+      ]
     }
   ]
 }
