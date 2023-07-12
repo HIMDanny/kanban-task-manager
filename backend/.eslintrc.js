@@ -54,6 +54,14 @@ module.exports = {
       },
     },
     {
+      files: ['column.module.ts'],
+      rules: {
+        'no-restricted-syntax': 'off',
+        '@typescript-eslint/no-extraneous-class': 'off',
+      },
+    },
+    //TODO: Write pattern for all ignoring module files
+    {
       files: ['board.repository.ts'],
       rules: {
         '@typescript-eslint/require-await': 'off',

@@ -11,5 +11,4 @@ import { ColumnService } from './column.service';
   providers: [ColumnService, ColumnRepository, Logger],
   exports: [ColumnService, ColumnRepository],
 })
-// eslint-disable-next-line no-restricted-syntax, @typescript-eslint/no-extraneous-class
 export class ColumnModule {}
