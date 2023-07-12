@@ -19,24 +19,10 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['app.module.ts'],
-      rules: {
-        '@typescript-eslint/no-extraneous-class': 'off',
-        'no-restricted-syntax': 'off',
-      },
-    },
-    {
       files: ['main.ts'],
       rules: {
         'function-name/starts-with-verb': 'off',
         '@typescript-eslint/no-floating-promises': 'off',
-      },
-    },
-    {
-      files: ['board.module.ts'],
-      rules: {
-        'no-restricted-syntax': 'off',
-        '@typescript-eslint/no-extraneous-class': 'off',
       },
     },
     {
@@ -47,20 +33,12 @@ module.exports = {
       },
     },
     {
-      files: ['prisma.module.ts'],
+      files: ['*.module.ts'],
       rules: {
         'no-restricted-syntax': 'off',
         '@typescript-eslint/no-extraneous-class': 'off',
       },
     },
-    {
-      files: ['column.module.ts'],
-      rules: {
-        'no-restricted-syntax': 'off',
-        '@typescript-eslint/no-extraneous-class': 'off',
-      },
-    },
-    //TODO: Write pattern for all ignoring module files
     {
       files: ['board.repository.ts'],
       rules: {
