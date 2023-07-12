@@ -48,7 +48,7 @@ class ColumnService {
     const { color, name } = data;
     const createdColumn = await this.columnRepository.createColumn({
       name,
-      color: Buffer.from(color, 'utf8'),
+      color: Buffer.from(JSON.stringify(color)),
     });
     this.logger.log(`Created column with ID ${createdColumn.id}`, {
       createdColumn,
@@ -64,7 +64,7 @@ class ColumnService {
     const updatedColumn = await this.columnRepository.updateColumn({
       data: {
         name: data.name,
-        color: Buffer.from(data.color, 'utf8'),
+        color: data.color ? Buffer.from(JSON.stringify(data.color)) : undefined,
       },
       where: {
         id: where.id,
