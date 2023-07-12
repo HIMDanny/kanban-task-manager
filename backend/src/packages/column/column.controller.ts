@@ -21,7 +21,7 @@ import type {
 import { ColumnCreateRequestDto, ColumnUpdateRequestDto } from './libs/dto/dto';
 import {
   ColumnCreateSchema,
-  ColumnUpdateBodySchema,
+  ColumnUpdateSchema,
   ColumnValidateParametersSchema,
 } from './libs/validation-schemas/validation-schemas';
 
@@ -65,7 +65,7 @@ class ColumnController {
       new ZodValidationPipe(ColumnValidateParametersSchema),
     )
     id: number,
-    @Body(new ZodValidationPipe(ColumnUpdateBodySchema))
+    @Body(new ZodValidationPipe(ColumnUpdateSchema))
     { name, color }: ColumnUpdateRequestDto,
   ): Promise<ColumnUpdateResponseDto> {
     return this.columnService.updateColumn({

@@ -21,7 +21,7 @@ import type {
 import { BoardCreateRequestDto, BoardUpdateRequestDto } from './libs/dto/dto';
 import {
   BoardCreateSchema,
-  BoardUpdateBodySchema,
+  BoardUpdateSchema,
   BoardValidateParametersSchema,
 } from './libs/validation-schemas/validation-schemas';
 
@@ -64,7 +64,7 @@ class BoardController {
       new ZodValidationPipe(BoardValidateParametersSchema),
     )
     id: number,
-    @Body(new ZodValidationPipe(BoardUpdateBodySchema))
+    @Body(new ZodValidationPipe(BoardUpdateSchema))
     { name }: BoardUpdateRequestDto,
   ): Promise<BoardUpdateResponseDto> {
     return this.boardService.updateBoard({
