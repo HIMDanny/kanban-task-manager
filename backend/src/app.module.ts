@@ -2,11 +2,13 @@ import { Module } from '@nestjs/common';
 import { LoggerModule } from 'nestjs-pino';
 
 import { BoardModule } from './packages/board/board.module';
+import { ColumnModule } from './packages/column/column.module';
 import { PrismaModule } from './packages/prisma/prisma.module';
 
 @Module({
   imports: [
     BoardModule,
+    ColumnModule,
     PrismaModule,
     LoggerModule.forRoot({
       pinoHttp: {

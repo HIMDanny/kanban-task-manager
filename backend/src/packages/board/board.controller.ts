@@ -9,6 +9,7 @@ import {
   Put,
 } from '@nestjs/common';
 
+import { ZodValidationPipe } from '../libs/helpers/pipes/zod-validation.pipe';
 import { BoardService } from './board.service';
 import type {
   BoardCreateResponseDto,
@@ -18,7 +19,6 @@ import type {
   BoardUpdateResponseDto,
 } from './libs/dto/dto';
 import { BoardCreateRequestDto, BoardUpdateRequestDto } from './libs/dto/dto';
-import { ZodValidationPipe } from './libs/helpers/pipes/pipes';
 import {
   BoardCreateSchema,
   BoardUpdateBodySchema,

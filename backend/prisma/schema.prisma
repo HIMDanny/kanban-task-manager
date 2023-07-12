@@ -13,3 +13,11 @@ model Board {
   updatedAt DateTime @updatedAt
   name      String
 }
+
+model Column {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  name      String
+  color     Bytes
+}

@@ -1,5 +1,7 @@
 import { Injectable, Logger, NotFoundException } from '@nestjs/common';
+import type { Board } from '@prisma/client';
 
+import { mapToDto } from '../libs/helpers/maps/map-to-dto/map-to-dto';
 import { BoardRepository } from './board.repository';
 import type {
   BoardCreateRequestDto,
@@ -11,7 +13,6 @@ import type {
   BoardUpdateRequestDto,
   BoardUpdateResponseDto,
 } from './libs/dto/dto';
-import { mapToDto } from './libs/helpers/maps/map-to-dto';
 
 @Injectable()
 class BoardService {
@@ -26,7 +27,7 @@ class BoardService {
     const board = await this.boardRepository.findBoard(boardWhereUniqueInput);
     if (board) {
       this.logger.log(`Found board with ID ${board.id}`, { board });
-      return mapToDto(board);
+      return mapToDto<Board, BoardGetOneItemResponseDto>(board);
     }
     throw new NotFoundException('Board not found');
   }
@@ -34,7 +35,9 @@ class BoardService {
   async findBoards(): Promise<BoardGetAllItemsResponseDto[]> {
     const boards = await this.boardRepository.findBoards({});
     this.logger.log(`Retrieved ${boards.length} boards`, { boards });
-    return boards.map((board) => mapToDto(board));
+    return boards.map((board) =>
+      mapToDto<Board, BoardGetAllItemsResponseDto>(board),
+    );
   }
 
   async createBoard(
@@ -44,7 +47,7 @@ class BoardService {
     this.logger.log(`Created board with ID ${createdBoard.id}`, {
       createdBoard,
     });
-    return mapToDto(createdBoard);
+    return mapToDto<Board, BoardCreateResponseDto>(createdBoard);
   }
 
   async updateBoard(parameters: {
@@ -55,7 +58,7 @@ class BoardService {
     this.logger.log(`Updated board with ID ${updatedBoard.id}`, {
       updatedBoard,
     });
-    return mapToDto(updatedBoard);
+    return mapToDto<Board, BoardUpdateResponseDto>(updatedBoard);
   }
 
   async deleteBoard(
@@ -65,7 +68,7 @@ class BoardService {
     this.logger.log(`Deleted board with ID ${deletedBoard.id}`, {
       deletedBoard,
     });
-    return mapToDto(deletedBoard);
+    return mapToDto<Board, BoardDeleteResponseDto>(deletedBoard);
   }
 }
 
