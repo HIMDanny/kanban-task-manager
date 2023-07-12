@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
-const BoardUpdateBodySchema = z.object({
-  name: z.string().trim().nonempty(), //BUG: Trim is not working
+const BoardUpdateSchema = z.object({
+  name: z.string().trim().min(1), //BUG: Trim is not working
 });
 
-export { BoardUpdateBodySchema };
+export { BoardUpdateSchema };

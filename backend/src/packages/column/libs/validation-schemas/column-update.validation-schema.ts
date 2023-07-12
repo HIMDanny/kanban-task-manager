@@ -1,8 +1,8 @@
 import { z } from 'zod';
 
-const ColumnUpdateBodySchema = z.object({
-  name: z.string().trim().nonempty().optional(), //BUG: Trim is not working
-  color: z.string().trim().nonempty().optional(), //BUG: Trim is not working; 500 error when is not provided color
+const ColumnUpdateSchema = z.object({
+  name: z.string().trim().min(1).optional(), //BUG: Trim is not working
+  color: z.string().trim().min(1).optional(), //BUG: Trim is not working
 });
 
-export { ColumnUpdateBodySchema };
+export { ColumnUpdateSchema };
