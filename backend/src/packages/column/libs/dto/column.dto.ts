@@ -8,5 +8,7 @@ class ColumnDto {
   name: string;
 
   color: Buffer;
+
+  boardId: number;
 }
 export { ColumnDto };

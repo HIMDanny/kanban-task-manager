@@ -45,10 +45,11 @@ class ColumnService {
   async createColumn(
     data: ColumnCreateRequestDto,
   ): Promise<ColumnCreateResponseDto> {
-    const { color, name } = data;
+    const { color, name, boardId } = data;
     const createdColumn = await this.columnRepository.createColumn({
       name,
       color: Buffer.from(JSON.stringify(color)),
+      board: { connect: { id: boardId } },
     });
     this.logger.log(`Created column with ID ${createdColumn.id}`, {
       createdColumn,

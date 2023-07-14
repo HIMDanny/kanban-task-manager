@@ -49,11 +49,12 @@ class ColumnController {
   @Post()
   async createColumn(
     @Body(new ZodValidationPipe(ColumnCreateSchema))
-    { name, color }: ColumnCreateRequestDto,
+    { name, color, boardId }: ColumnCreateRequestDto,
   ): Promise<ColumnCreateResponseDto> {
     return this.columnService.createColumn({
       name,
       color,
+      boardId,
     });
   }
 

@@ -12,6 +12,7 @@ model Board {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   name      String
+  columns   Column[]
 }
 
 model Column {
@@ -20,4 +21,6 @@ model Column {
   updatedAt DateTime @updatedAt
   name      String
   color     Bytes
+  board     Board    @relation(fields: [boardId], references: [id])
+  boardId   Int
 }
