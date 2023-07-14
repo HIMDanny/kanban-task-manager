@@ -4,6 +4,7 @@ import { LoggerModule } from 'nestjs-pino';
 import { BoardModule } from './packages/board/board.module';
 import { ColumnModule } from './packages/column/column.module';
 import { PrismaModule } from './packages/prisma/prisma.module';
+import { SubtaskModule } from './packages/subtask/subtask.module';
 import { TaskModule } from './packages/task/task.module';
 
 @Module({
@@ -11,6 +12,7 @@ import { TaskModule } from './packages/task/task.module';
     BoardModule,
     ColumnModule,
     TaskModule,
+    SubtaskModule,
     PrismaModule,
     LoggerModule.forRoot({
       pinoHttp: {
