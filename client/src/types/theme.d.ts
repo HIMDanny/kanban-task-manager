@@ -17,12 +17,17 @@ declare module 'styled-components' {
         800: string;
       };
       primary: {
+        contrastText: string;
         light: string;
         main: string;
       };
       red: {
         light: string;
         main: string;
+      };
+      text: {
+        primary: string;
+        secondary: string;
       };
       white: string;
     };

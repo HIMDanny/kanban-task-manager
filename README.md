@@ -67,21 +67,20 @@ erDiagram
     dateTime updated_at
     varchar name
   }
+  board ||--|{ column : board_id
   column {
     int id PK
     dateTime created_at
     dateTime updated_at
     varchar name
     bytea color
+    int board_id FK
   }
-
- board ||--|{ task : board_id
  column ||--|{ task : column_id
   task {
     int id PK
     dateTime created_at
     dateTime updated_at
-    int board_id FK
     int column_id FK
     varchar title
     text description "may be null if user doesn't provide description"
