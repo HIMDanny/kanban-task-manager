@@ -1,8 +1,8 @@
 interface Board {
-  createdAt: string;
+  createdAt: Date;
   id: number;
   name: string;
-  updatedAt: string;
+  updatedAt: Date;
 }
 
 export type { Board };
