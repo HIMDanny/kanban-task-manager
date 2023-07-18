@@ -7,7 +7,7 @@ class ColumnDto {
 
   name: string;
 
-  color: Buffer;
+  color: Buffer | string;
 
   boardId: number;
 }
