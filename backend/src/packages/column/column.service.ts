@@ -37,9 +37,11 @@ class ColumnService {
   async findColumns(): Promise<ColumnGetAllItemsResponseDto[]> {
     const columns = await this.columnRepository.findColumns({});
     this.logger.log(`Retrieved ${columns.length} columns`, { columns });
-    return columns.map((column) =>
-      mapToDto<Column, ColumnGetAllItemsResponseDto>(column),
-    );
+    return columns.map((column) => {
+      const dto = mapToDto<Column, ColumnGetAllItemsResponseDto>(column);
+      dto.color = dto.color.toString();
+      return dto;
+    });
   }
 
   async createColumn(
@@ -48,7 +50,7 @@ class ColumnService {
     const { color, name, boardId } = data;
     const createdColumn = await this.columnRepository.createColumn({
       name,
-      color: Buffer.from(JSON.stringify(color)),
+      color: Buffer.from(color),
       board: { connect: { id: boardId } },
     });
     this.logger.log(`Created column with ID ${createdColumn.id}`, {
@@ -65,7 +67,7 @@ class ColumnService {
     const updatedColumn = await this.columnRepository.updateColumn({
       data: {
         name: data.name,
-        color: data.color ? Buffer.from(JSON.stringify(data.color)) : undefined,
+        color: data.color ? Buffer.from(data.color) : undefined,
       },
       where: {
         id: where.id,
