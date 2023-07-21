@@ -29,12 +29,22 @@ model Column {
 }
 
 model Task {
-  id          Int      @id @default(autoincrement())
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-  column      Column   @relation(fields: [columnId, status], references: [id, name])
+  id          Int       @id @default(autoincrement())
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  column      Column    @relation(fields: [columnId, status], references: [id, name])
   columnId    Int
   title       String
   description String?
   status      String
+  Subtasks    Subtask[]
+}
+
+model Subtask {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  title     String
+  task      Task     @relation(fields: [taskId], references: [id])
+  taskId    Int
 }

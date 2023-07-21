@@ -103,7 +103,7 @@
               "protocol": "http",
               "host": ["localhost"],
               "port": "3000",
-              "path": ["boards", "16"]
+              "path": ["boards", "1"]
             }
           },
           "response": []
@@ -294,11 +294,11 @@
               }
             },
             "url": {
-              "raw": "http://localhost:3000/tasks/2",
+              "raw": "http://localhost:3000/tasks/1",
               "protocol": "http",
               "host": ["localhost"],
               "port": "3000",
-              "path": ["tasks", "2"]
+              "path": ["tasks", "1"]
             }
           },
           "response": []
@@ -314,6 +314,111 @@
               "host": ["localhost"],
               "port": "3000",
               "path": ["tasks", "1"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "subtasks",
+      "item": [
+        {
+          "name": "/subtasks",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/subtasks",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["subtasks"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/subtasks/:id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/subtasks/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["subtasks", "1"],
+              "query": [
+                {
+                  "key": "",
+                  "value": null,
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/subtasks",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"title\": \"Bulbazavr\",\n    \"columnId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/subtasks",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["subtasks"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/subtasks/:id",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Boolbazavr\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/subtasks/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["subtasks", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/subtasks/:id",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/subtasks/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["subtasks", "1"]
             }
           },
           "response": []
