@@ -5,11 +5,12 @@ module.exports = {
     sourceType: 'module',
     project: './tsconfig.json',
   },
-  extends: ['../.eslintrc.js'],
+  extends: ['../.eslintrc.js', 'plugin:jest/recommended'],
   env: {
     node: true,
     jest: true,
   },
+  plugins: ['jest'],
   ignorePatterns: ['.eslintrc.js', 'app.e2e-spec.ts'],
   rules: {
     '@typescript-eslint/interface-name-prefix': 'off',

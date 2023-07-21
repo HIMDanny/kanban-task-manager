@@ -23,7 +23,7 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./jest-e2e.json"
   },
   "jest": {
     "moduleFileExtensions": [
@@ -50,7 +50,6 @@
     "@nestjs/platform-fastify": "10.0.3",
     "@nestjs/schematics": "10.0.1",
     "@nestjs/swagger": "7.0.10",
-    "@nestjs/testing": "10.0.3",
     "@prisma/client": "4.16.0",
     "@types/express": "4.17.17",
     "@types/jest": "29.5.2",
@@ -75,5 +74,9 @@
     "ts-node": "10.9.1",
     "tsconfig-paths": "4.2.0",
     "zod": "3.21.4"
+  },
+  "devDependencies": {
+    "@nestjs/testing": "10.1.0",
+    "eslint-plugin-jest": "27.2.3"
   }
 }
