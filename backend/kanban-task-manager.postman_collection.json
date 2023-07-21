@@ -29,11 +29,11 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:3000/boards/16",
+              "raw": "http://localhost:3000/boards/1",
               "protocol": "http",
               "host": ["localhost"],
               "port": "3000",
-              "path": ["boards", "16"],
+              "path": ["boards", "1"],
               "query": [
                 {
                   "key": "",
@@ -52,7 +52,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"name\": \"Putin huilo\"\n}",
+              "raw": "{\n    \"name\": \"Pockemons\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -76,7 +76,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"name\": \"Russia is a terrorist state\"\n}",
+              "raw": "{\n    \"name\": \"Pokemons\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -84,11 +84,11 @@
               }
             },
             "url": {
-              "raw": "http://localhost:3000/boards/16",
+              "raw": "http://localhost:3000/boards/1",
               "protocol": "http",
               "host": ["localhost"],
               "port": "3000",
-              "path": ["boards", "16"]
+              "path": ["boards", "1"]
             }
           },
           "response": []
@@ -99,7 +99,7 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "http://localhost:3000/boards/16",
+              "raw": "http://localhost:3000/boards/1",
               "protocol": "http",
               "host": ["localhost"],
               "port": "3000",
@@ -157,7 +157,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"name\": \"Bandera\",\n    \"color\": \"#42a7f5\"\n}",
+              "raw": "{\n    \"name\": \"Animalss\",\n    \"color\": \"#42a7f5\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -181,7 +181,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"Stepan\"\n}",
+              "raw": "{\n  \"name\": \"Animals\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -189,11 +189,11 @@
               }
             },
             "url": {
-              "raw": "http://localhost:3000/columns/2",
+              "raw": "http://localhost:3000/columns/1",
               "protocol": "http",
               "host": ["localhost"],
               "port": "3000",
-              "path": ["columns", "2"]
+              "path": ["columns", "1"]
             }
           },
           "response": []
@@ -204,11 +204,116 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "http://localhost:3000/columns/2",
+              "raw": "http://localhost:3000/columns/1",
               "protocol": "http",
               "host": ["localhost"],
               "port": "3000",
-              "path": ["columns", "2"]
+              "path": ["columns", "1"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "tasks",
+      "item": [
+        {
+          "name": "/tasks",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/tasks",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["tasks"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/tasks/:id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/tasks/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["tasks", "1"],
+              "query": [
+                {
+                  "key": "",
+                  "value": null,
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/tasks",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"title\": \"Pikachu\",\n    \"columnId\": 1,\n    \"status\": \"Main character\",\n    \"description\": \"Yellow, funny and cute\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/tasks",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["tasks"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/tasks/:id",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"description\": \"Yellow, funny, cute, MY FAVORITE!\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/tasks/2",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["tasks", "2"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/tasks/:id",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/tasks/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["tasks", "1"]
             }
           },
           "response": []

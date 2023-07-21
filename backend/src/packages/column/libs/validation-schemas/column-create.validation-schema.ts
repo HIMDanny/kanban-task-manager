@@ -2,8 +2,9 @@ import { z } from 'zod';
 
 const ColumnCreateSchema = z
   .object({
-    name: z.string().trim().min(1), //BUG: Trim is not working
-    color: z.string().trim().min(1), //BUG: Trim is not working
+    name: z.string().min(1),
+    color: z.string().min(1),
+    boardId: z.number().int().positive(),
   })
   .required();
 
