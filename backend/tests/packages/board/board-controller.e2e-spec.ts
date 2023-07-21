@@ -1,3 +1,4 @@
+// import { NotFoundException } from '@nestjs/common/exceptions/not-found.exception';
 // eslint-disable-next-line unicorn/prevent-abbreviations
 import type { NestFastifyApplication } from '@nestjs/platform-fastify';
 import { FastifyAdapter } from '@nestjs/platform-fastify';
@@ -56,6 +57,16 @@ describe('BoardController (e2e)', () => {
     });
 
     expect(response.statusCode).toEqual(200);
+  });
+
+  it('/boards/:id (GET) - Not found', async () => {
+    const nonExistentId = 999;
+    const response = await app.inject({
+      method: 'GET',
+      url: `/boards/${nonExistentId}`,
+    });
+
+    expect(response.statusCode).toEqual(404);
   });
 
   it('/boards/:id (PUT)', async () => {
