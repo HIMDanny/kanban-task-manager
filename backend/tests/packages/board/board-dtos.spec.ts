@@ -10,49 +10,44 @@ import {
   BoardUpdateResponseDto,
 } from '../../../src/packages/board/libs/dto/dto';
 
-describe('BoardCreateRequestDto', () => {
-  // eslint-disable-next-line sonarjs/no-duplicate-string
+const expectToBeDefined = (dto: unknown) => {
   it('should be defined', () => {
-    const dto = new BoardCreateRequestDto();
     expect(dto).toBeDefined();
   });
+};
+
+const expectToExtendBoardDto = (dto: unknown) => {
+  it('should extend BoardDto', () => {
+    expect(dto).toBeInstanceOf(BoardDto);
+  });
+};
+
+describe('BoardCreateRequestDto', () => {
+  const boardCreateRequestDto = new BoardCreateRequestDto();
+  expectToBeDefined(boardCreateRequestDto);
 
   it('should have a name property', () => {
     const dto = new BoardCreateRequestDto();
+    dto.name = 'Pohemons';
     expect(dto).toHaveProperty('name');
   });
 });
 
 describe('BoardCreateResponseDto', () => {
-  it('should be defined', () => {
-    const dto = new BoardCreateResponseDto();
-    expect(dto).toBeDefined();
-  });
-
-  // eslint-disable-next-line sonarjs/no-duplicate-string
-  it('should extend BoardDto', () => {
-    const dto = new BoardCreateResponseDto();
-    expect(dto).toBeInstanceOf(BoardDto);
-  });
+  const boardCreateResponseDto = new BoardCreateResponseDto();
+  expectToBeDefined(boardCreateResponseDto);
+  expectToExtendBoardDto(boardCreateResponseDto);
 });
 
 describe('BoardDeleteResponseDto', () => {
-  it('should be defined', () => {
-    const dto = new BoardDeleteResponseDto();
-    expect(dto).toBeDefined();
-  });
-
-  it('should extend BoardDto', () => {
-    const dto = new BoardDeleteResponseDto();
-    expect(dto).toBeInstanceOf(BoardDto);
-  });
+  const boardDeleteResponseDto = new BoardDeleteResponseDto();
+  expectToBeDefined(boardDeleteResponseDto);
+  expectToExtendBoardDto(boardDeleteResponseDto);
 });
 
 describe('BoardGetAllItemsResponseDto', () => {
-  it('should be defined', () => {
-    const dto = new BoardGetAllItemsResponseDto();
-    expect(dto).toBeDefined();
-  });
+  const boardGetAllItemsResponseDto = new BoardGetAllItemsResponseDto();
+  expectToBeDefined(boardGetAllItemsResponseDto);
 
   it('should extend BoardGetOneItemResponseDto', () => {
     const dto = new BoardGetAllItemsResponseDto();
@@ -61,49 +56,35 @@ describe('BoardGetAllItemsResponseDto', () => {
 });
 
 describe('BoardGetOneItemResponseDto', () => {
-  it('should be defined', () => {
-    const dto = new BoardGetOneItemResponseDto();
-    expect(dto).toBeDefined();
-  });
-
-  it('should extend BoardDto', () => {
-    const dto = new BoardGetOneItemResponseDto();
-    expect(dto).toBeInstanceOf(BoardDto);
-  });
+  const boardGetOneItemResponseDto = new BoardGetOneItemResponseDto();
+  expectToBeDefined(boardGetOneItemResponseDto);
+  expectToExtendBoardDto(boardGetOneItemResponseDto);
 });
 
 describe('BoardGetOneItemRequestDto', () => {
-  it('should be defined', () => {
-    const dto = new BoardGetOneItemRequestDto();
-    expect(dto).toBeDefined();
-  });
+  const boardGetOneItemRequestDto = new BoardGetOneItemRequestDto();
+  expectToBeDefined(boardGetOneItemRequestDto);
 
   it('should have an id property', () => {
     const dto = new BoardGetOneItemRequestDto();
+    dto.id = 1;
     expect(dto).toHaveProperty('id');
   });
 });
 
 describe('BoardUpdateRequestDto', () => {
-  it('should be defined', () => {
-    const dto = new BoardUpdateRequestDto();
-    expect(dto).toBeDefined();
-  });
+  const boardUpdateRequestDto = new BoardUpdateRequestDto();
+  expectToBeDefined(boardUpdateRequestDto);
 
   it('should have a name property', () => {
     const dto = new BoardUpdateRequestDto();
+    dto.name = 'Pokemons';
     expect(dto).toHaveProperty('name');
   });
 });
 
 describe('BoardUpdateResponseDto', () => {
-  it('should be defined', () => {
-    const dto = new BoardUpdateResponseDto();
-    expect(dto).toBeDefined();
-  });
-
-  it('should extend BoardDto', () => {
-    const dto = new BoardUpdateResponseDto();
-    expect(dto).toBeInstanceOf(BoardDto);
-  });
+  const boardUpdateResponseDto = new BoardUpdateResponseDto();
+  expectToBeDefined(boardUpdateResponseDto);
+  expectToExtendBoardDto(boardUpdateResponseDto);
 });
