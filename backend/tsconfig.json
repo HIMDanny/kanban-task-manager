@@ -19,5 +19,5 @@
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false
   },
-  "include": ["src", "tests"]
+  "include": ["src", "tests", "prisma/seeds"]
 }
