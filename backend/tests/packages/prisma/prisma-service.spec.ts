@@ -25,11 +25,9 @@ describe('PrismaService', () => {
     await app.init();
     await app.getHttpAdapter().getInstance().ready();
     await prismaService.onModuleInit();
-    await prismaService.enableShutdownHooks(app);
   });
 
   afterAll(async () => {
-    process.emit('beforeExit', 0);
     await app.close();
   });
 

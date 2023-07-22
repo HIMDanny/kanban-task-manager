@@ -12,6 +12,7 @@ async function bootstrap() {
     new FastifyAdapter(),
     { bufferLogs: true, cors: true },
   );
+  app.enableShutdownHooks();
   setupSwagger(app);
   app.useLogger(app.get(Logger));
   await app.listen(3000);
