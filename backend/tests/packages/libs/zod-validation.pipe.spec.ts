@@ -7,7 +7,7 @@ import { ZodValidationPipe } from '../../../src/packages/board/libs/helpers/pipe
 describe('ZodValidationPipe', () => {
   let pipe: ZodValidationPipe;
   const schema: Schema = z.object({
-    name: z.string().trim().nonempty(),
+    name: z.string().nonempty(),
   });
 
   beforeAll(() => {
@@ -26,10 +26,10 @@ describe('ZodValidationPipe', () => {
   });
 
   it('should throw original error if not a ZodError', () => {
-    const someOtherError = new Error('Hehe cried');
+    const customError = new Error('Hehe cried');
     jest.spyOn(schema, 'parse').mockImplementationOnce(() => {
-      throw someOtherError;
+      throw customError;
     });
-    expect(() => pipe.transform({})).toThrow(someOtherError);
+    expect(() => pipe.transform({})).toThrow(customError);
   });
 });
